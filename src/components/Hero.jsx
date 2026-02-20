@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import heroBg from '../assets/pigeon_hero_bg.png';
 
 const Hero = () => {
+    const particles = useMemo(() => {
+        return [...Array(8)].map((_, i) => ({
+            id: i,
+            width: `${Math.random() * 6 + 3}px`,
+            height: `${Math.random() * 6 + 3}px`,
+            background: i % 2 === 0 ? '#6c63ff' : '#f59e0b',
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            dur: `${Math.random() * 3 + 3}s`,
+            delay: `${Math.random() * 2}s`,
+        }));
+    }, []);
+
     return (
         <section className="hero" id="home">
             {/* Background */}
@@ -12,18 +25,18 @@ const Hero = () => {
 
             {/* Decorative particles */}
             <div className="hero-particles">
-                {[...Array(8)].map((_, i) => (
+                {particles.map((p) => (
                     <div
-                        key={i}
+                        key={p.id}
                         className="particle"
                         style={{
-                            width: `${Math.random() * 6 + 3}px`,
-                            height: `${Math.random() * 6 + 3}px`,
-                            background: i % 2 === 0 ? '#6c63ff' : '#f59e0b',
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                            '--dur': `${Math.random() * 3 + 3}s`,
-                            '--delay': `${Math.random() * 2}s`,
+                            width: p.width,
+                            height: p.height,
+                            background: p.background,
+                            top: p.top,
+                            left: p.left,
+                            '--dur': p.dur,
+                            '--delay': p.delay,
                         }}
                     />
                 ))}

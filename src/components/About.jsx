@@ -14,7 +14,7 @@ const About = () => {
                         </h2>
                         <p className="section-desc">
                             Sundon Park Social FC is a private members-only racing pigeon club based in Luton.
-                            We compete in SR Midshire Fedaration races.
+                            We compete in SR Midshire Federation races.
                         </p>
 
                         <div className="about-features">

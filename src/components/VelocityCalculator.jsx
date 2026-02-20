@@ -33,16 +33,19 @@ const VelocityCalculator = () => {
     const [form, setForm] = useState(DEFAULT);
     const [result, setResult] = useState(null);
     const [error, setError] = useState('');
+    const [copied, setCopied] = useState(false);
 
     const set = (field, value) => {
         setForm(prev => ({ ...prev, [field]: value }));
         setResult(null);
         setError('');
+        setCopied(false);
     };
 
     const calculate = (e) => {
         e.preventDefault();
         setError('');
+        setCopied(false);
 
         const { releaseHH, releaseMM, clockHH, clockMM, clockSS, distance, unit } = form;
 
@@ -80,6 +83,16 @@ const VelocityCalculator = () => {
         setForm(DEFAULT);
         setResult(null);
         setError('');
+        setCopied(false);
+    };
+
+    const handleCopy = () => {
+        if (!result) return;
+        const text = `Sundon Park Social FC — Velocity: ${result.ypm.toLocaleString()} YPM (${result.rating.label})`;
+        navigator.clipboard.writeText(text).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        });
     };
 
     return (
@@ -227,12 +240,19 @@ const VelocityCalculator = () => {
                             <div className="calc-result-card" style={{ '--result-color': result.rating.color }}>
                                 <div className="calc-result-header">
                                     <div className="calc-result-emoji">{result.rating.emoji}</div>
-                                    <div>
+                                    <div style={{ flex: 1 }}>
                                         <div className="calc-result-rating" style={{ color: result.rating.color }}>
                                             {result.rating.label}
                                         </div>
                                         <div className="calc-result-desc">{result.rating.desc}</div>
                                     </div>
+                                    <button
+                                        className={`calc-copy-btn ${copied ? 'copied' : ''}`}
+                                        onClick={handleCopy}
+                                        title="Copy to clipboard"
+                                    >
+                                        {copied ? '✅' : '📋'}
+                                    </button>
                                 </div>
 
                                 <div className="calc-result-ypm">
