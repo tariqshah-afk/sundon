@@ -17,7 +17,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <p className="footer-tagline">
-                            Luton's premier racing pigeon club. Competing with passion, precision and pride since our founding.
+                            Luton's racing pigeon club. Competing with passion, precision and pride since our founding.
                         </p>
                     </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p className="footer-copy">
-                        © {year} Sundon Park Social FC. All rights reserved.
+                        © {year} T.Shah. All rights reserved.
                     </p>
                     <div className="footer-private">
                         🔒 Private Members Only
