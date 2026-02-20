@@ -88,7 +88,7 @@ const Hero = () => {
                                 <div className="hero-stat-label">Member</div>
                             </div>
                             <div className="hero-stat">
-                                <div className="hero-stat-value gradient-text">2025</div>
+                                <div className="hero-stat-value gradient-text">2026</div>
                                 <div className="hero-stat-label">Season</div>
                             </div>
                         </div>
