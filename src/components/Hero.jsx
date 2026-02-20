@@ -47,7 +47,7 @@ const Hero = () => {
 
                         <p className="hero-subtitle">
                             Luton's premier racing pigeon flying club. We race with passion,
-                            precision, and pride — from short sprints to marathon distances.
+                            precision, and pride — from short sprints.
                         </p>
 
                         <div className="hero-actions">
