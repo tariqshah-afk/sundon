@@ -37,7 +37,7 @@ const Footer = () => {
                         <ul>
                             <li><a href="https://nationalflyingclub.co.uk/" target="_blank" rel="noopener noreferrer">National Flying Club</a></li>
                             <li><a href="https://biccpigeons.co.uk/" target="_blank" rel="noopener noreferrer">BICC</a></li>
-                            <li><a href="https://www.xcweather.co.uk/" target="_blank" rel="noopener noreferrer">XC Weather</a></li>
+                            <li><a href="https://www.weatherandradar.co.uk/" target="_blank" rel="noopener noreferrer">Weather</a></li>
                         </ul>
                     </div>
                 </div>
