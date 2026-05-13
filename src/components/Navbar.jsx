@@ -48,7 +48,7 @@ const Navbar = () => {
                 </ul>
 
                 <a
-                    href="https://www.xcweather.co.uk/"
+                    href="https://www.weatherandradar.co.uk/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="navbar-badge"
