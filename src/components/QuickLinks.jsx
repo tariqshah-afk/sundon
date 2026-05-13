@@ -73,7 +73,7 @@ const EXTERNAL_LINKS = [
         title: 'Weather Forecast',
         desc: 'Check current wind speeds, cloud cover and flying conditions before race day.',
         cta: 'Check Weather',
-        url: 'https://www.xcweather.co.uk/',
+        url: 'https://www.weatherandradar.co.uk/',
         accentA: 'rgba(168, 85, 247, 0.12)',
         accentB: 'rgba(168, 85, 247, 0.03)',
         borderHover: 'rgba(168, 85, 247, 0.45)',
