@@ -111,7 +111,7 @@ const Hero = () => {
                                     { icon: '⏱️', text: 'BICC Early Times', url: 'https://biccpigeons.co.uk/racing/early-times/' },
                                     { icon: '📡', text: 'Benzing Live', url: 'https://mypigeons.benzing.live/gb/en/results/2025/o-8-hpc-greater-harrow-racing-pigeon-club/races/' },
                                     { icon: '🌐', text: 'NFC Website', url: 'https://nationalflyingclub.co.uk/' },
-                                    { icon: '🌤️', text: 'Weather Forecast', url: 'https://www.xcweather.co.uk/' },
+                                    { icon: '🌤️', text: 'Weather Forecast', url: 'https://www.weatherandradar.co.uk/' },
                                 ].map(({ icon, text, url }) => (
                                     <a
                                         key={text}
